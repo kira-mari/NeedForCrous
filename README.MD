@@ -16,6 +16,14 @@ Un bot Telegram intelligent qui surveille automatiquement le site [TrouverUnLoge
 
 Ce projet peut fonctionner comme un script Python classique, via Docker, ou comme une application autonome (`.exe`) sous Windows.
 
+🌐 Site du projet : [ahmed-ghemari.me/NeedForCrous](https://ahmed-ghemari.me/NeedForCrous/)
+
+## 📸 Screenshots
+
+![Screenshot 1](docs/img/1.jpeg)
+![Screenshot 2](docs/img/2.jpeg)
+![Screenshot 3](docs/img/3.jpeg)
+
 ## ✨ Fonctionnalités
 
 - **Surveillance Automatique** : Vérifie périodiquement la disponibilité (intervalle configurable).

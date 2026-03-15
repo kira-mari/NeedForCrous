@@ -692,6 +692,7 @@ body.cursor-click .cursor-ring {
 
 .why,
 .flow,
+.install,
 .cta {
     padding: 4.2rem 0;
 }
@@ -734,6 +735,14 @@ body.cursor-click .cursor-ring {
     font-size: clamp(1.55rem, 3.2vw, 2.3rem);
 }
 
+.section-lead {
+    margin-top: 0.7rem;
+    color: #b9c2cf;
+    max-width: 68ch;
+    line-height: 1.55;
+    font-size: 0.94rem;
+}
+
 .feature-grid {
     margin-top: 1.25rem;
     display: grid;
@@ -750,27 +759,26 @@ body.cursor-click .cursor-ring {
     min-height: 142px;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    transition: border-color 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .feature-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(227, 6, 19, 0.85), rgba(227, 6, 19, 0));
-    opacity: 0.75;
+    content: none;
 }
 
 .feature-card:hover {
-    border-color: rgba(227, 6, 19, 0.55);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-    transform: translateY(-4px);
+    border-color: rgba(227, 6, 19, 0.62);
+    background: linear-gradient(160deg, rgba(227, 6, 19, 0.13), rgba(255, 255, 255, 0.02));
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(227, 6, 19, 0.22) inset;
+    transform: translateY(-6px) scale(1.01);
+}
+
+.feature-card:hover .feature-icon {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(227, 6, 19, 0.25);
 }
 
 .feature-card h3 {
@@ -781,6 +789,34 @@ body.cursor-click .cursor-ring {
 .feature-card p {
     color: #b9c2cf;
     font-size: 0.9rem;
+}
+
+.feature-head {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: linear-gradient(130deg, rgba(227, 6, 19, 0.22), rgba(227, 6, 19, 0.08));
+    border: 1px solid rgba(227, 6, 19, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-note {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+    color: #d7dce6;
+    opacity: 0.88;
+    border-top: 1px dashed rgba(255, 255, 255, 0.14);
+    padding-top: 0.55rem;
 }
 
 .timeline {
@@ -856,6 +892,59 @@ body.cursor-click .cursor-ring {
 .timeline-item p {
     color: #b9c2cf;
     font-size: 0.9rem;
+}
+
+.install-wrap {
+    margin-top: 1.2rem;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 0 clamp(0.6rem, 3vw, 2rem);
+    display: flex;
+    justify-content: center;
+}
+
+.install-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.15rem;
+}
+
+.install-card h3 {
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+}
+
+.install-card ol {
+    margin-left: 1.1rem;
+    display: grid;
+    gap: 0.55rem;
+    color: #c8ced8;
+    line-height: 1.4;
+    font-size: 0.92rem;
+}
+
+.install-gif {
+    margin: 0;
+    width: min(1100px, 92vw);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: clamp(0.35rem, 1vw, 0.7rem);
+}
+
+.install-gif img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid rgba(227, 6, 19, 0.3);
+}
+
+.install-gif figcaption {
+    margin-top: 0.55rem;
+    color: #b9c2cf;
+    font-size: 0.82rem;
+    text-align: center;
 }
 
 .cta {
@@ -1129,6 +1218,14 @@ body.cursor-click .cursor-ring {
         grid-template-columns: 1fr;
         gap: 0.72rem;
         padding-top: 0;
+    }
+
+    .install-wrap {
+        padding: 0 0.55rem;
+    }
+
+    .install-gif {
+        width: 100%;
     }
 
     .timeline::before {

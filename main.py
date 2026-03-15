@@ -181,7 +181,10 @@ def run_search_process(
     except Exception as e:
         logger.error(f"Error during search process: {e}", exc_info=True)
         if requester_id:
-            bot.sendMessage(requester_id, f"❌ Erreur durant la recherche : {str(e)}")
+            try:
+                bot.sendMessage(requester_id, f"❌ Erreur durant la recherche : {str(e)}")
+            except Exception as notify_error:
+                logger.warning(f"Failed to send error message to Telegram: {notify_error}")
     finally:
         if driver:
             driver.quit()

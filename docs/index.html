@@ -102,23 +102,43 @@
             <div class="section-intro reveal">
                 <p class="section-kicker">POURQUOI CE BOT</p>
                 <h2>Concu pour la vraie course aux logements CROUS</h2>
+                <p class="section-lead">
+                    Quand une offre sort, chaque minute compte. Need For Crous est pense pour vous faire gagner du temps,
+                    simplifier le lancement et rester fiable dans la duree.
+                </p>
             </div>
             <div class="feature-grid">
                 <article class="feature-card reveal">
-                    <h3>Temps reel</h3>
-                    <p>Detection continue des nouvelles annonces pour reduire au maximum le delai de reaction.</p>
+                    <div class="feature-head">
+                        <span class="feature-icon" aria-hidden="true">⚡</span>
+                        <h3>Alertes quasi instantanees</h3>
+                    </div>
+                    <p>Surveillance continue des annonces CROUS pour etre notifie des qu'un logement apparait.</p>
+                    <p class="feature-note">Objectif : repondre vite, avant la majorite des candidats.</p>
                 </article>
                 <article class="feature-card reveal">
-                    <h3>Mode no-code</h3>
-                    <p>Version executable prete a lancer, sans installation complexe ni ligne de commande obligatoire.</p>
+                    <div class="feature-head">
+                        <span class="feature-icon" aria-hidden="true">🧩</span>
+                        <h3>Experience no-code</h3>
+                    </div>
+                    <p>Un executable Windows pret a lancer, sans setup technique lourd ni prerequis complexes.</p>
+                    <p class="feature-note">Double-clic, configuration guidee, bot actif en quelques minutes.</p>
                 </article>
                 <article class="feature-card reveal">
-                    <h3>Open Source</h3>
-                    <p>Code transparent, licence MIT, contribution possible et audit facile par la communaute.</p>
+                    <div class="feature-head">
+                        <span class="feature-icon" aria-hidden="true">🔍</span>
+                        <h3>Open source et verifiable</h3>
+                    </div>
+                    <p>Code transparent sous licence MIT, modifiable et auditable par toute la communaute.</p>
+                    <p class="feature-note">Vous savez exactement ce que fait le bot et comment il le fait.</p>
                 </article>
                 <article class="feature-card reveal">
-                    <h3>Robuste</h3>
-                    <p>Compatible Docker avec gestion moderne du navigateur et du driver pour plus de stabilite.</p>
+                    <div class="feature-head">
+                        <span class="feature-icon" aria-hidden="true">🛡️</span>
+                        <h3>Stable sur la duree</h3>
+                    </div>
+                    <p>Compatible Docker et optimise pour rester operationnel avec une gestion moderne du navigateur.</p>
+                    <p class="feature-note">Moins d'interruptions, plus de surveillance continue.</p>
                 </article>
             </div>
         </section>
@@ -132,24 +152,31 @@
                 <article class="timeline-item reveal">
                     <span>1</span>
                     <div>
-                        <h3>Recuperer la release</h3>
-                        <p>Telechargez la derniere version depuis les releases du projet.</p>
+                        <h3>Telecharger le projet</h3>
+                        <p>Recuperez la derniere version depuis GitHub (ZIP ou clone) puis ouvrez le dossier.</p>
                     </div>
                 </article>
                 <article class="timeline-item reveal">
                     <span>2</span>
                     <div>
-                        <h3>Configurer vos criteres</h3>
-                        <p>Renseignez vos zones, votre budget et vos options d'alerte Telegram.</p>
+                        <h3>Lancer le build Windows</h3>
+                        <p>Executez <code>build_exe.bat</code> et suivez le wizard (mode, choix <code>.env</code> ou <code>.env.template</code>).</p>
                     </div>
                 </article>
                 <article class="timeline-item reveal">
                     <span>3</span>
                     <div>
-                        <h3>Lancer la surveillance</h3>
-                        <p>Le bot analyse les offres en boucle et vous previens des qu'une place se libere.</p>
+                        <h3>Demarrer le bot</h3>
+                        <p>Lancez <code>dist/NeedForCrous.exe</code>, puis envoyez <code>/start</code> sur Telegram.</p>
                     </div>
                 </article>
+            </div>
+
+            <div class="install-wrap">
+                <figure class="install-gif reveal">
+                    <img src="img/Install_NFC.gif" alt="Démonstration de l'installation de Need For Crous">
+                    <figcaption>Installation guidée du build Windows</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -323,7 +350,7 @@
         (function () {
             const targets = Array.from(
                 document.querySelectorAll(
-                    "#why .section-intro, #why .feature-card, #flow .section-intro, #flow .timeline-item, #start"
+                    "#why .section-intro, #why .feature-card, #flow .section-intro, #flow .timeline-item, #flow .install-card, #flow .install-gif, #start"
                 )
             );
 
