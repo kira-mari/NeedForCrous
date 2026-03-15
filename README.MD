@@ -20,9 +20,11 @@ Ce projet peut fonctionner comme un script Python classique, via Docker, ou comm
 
 ## 📸 Screenshots
 
-![Screenshot 1](docs/img/1.jpeg)
-![Screenshot 2](docs/img/2.jpeg)
-![Screenshot 3](docs/img/3.jpeg)
+<p align="center">
+   <img src="docs/img/1.jpeg" alt="Screenshot 1" width="31%" />
+   <img src="docs/img/2.jpeg" alt="Screenshot 2" width="31%" />
+   <img src="docs/img/3.jpeg" alt="Screenshot 3" width="31%" />
+</p>
 
 ## ✨ Fonctionnalités
 
